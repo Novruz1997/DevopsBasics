@@ -10,6 +10,7 @@ pool: MyPool
 
 steps:
 - script: |
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.5.jdk/Contents/Home
     echo "JAVA_HOME_17_X64: $JAVA_HOME_17_X64"
     echo "JAVA_HOME: $JAVA_HOME"
   displayName: 'Display JAVA_HOME Variables'
