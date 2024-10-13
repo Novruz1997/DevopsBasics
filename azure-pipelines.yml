@@ -9,6 +9,10 @@ trigger:
 pool: MyPool
 
 steps:
+- script: |
+    echo "JAVA_HOME_17_X64: $JAVA_HOME_17_X64"
+    echo "JAVA_HOME: $JAVA_HOME"
+  displayName: 'Display JAVA_HOME Variables'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
