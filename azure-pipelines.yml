@@ -16,12 +16,7 @@ steps:
     echo "JAVA_HOME: $JAVA_HOME"
   displayName: 'Display JAVA_HOME Variables'
 - task: Maven@3
+  displayName: "Maven Package"
   inputs:
     mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '17.0.5'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
